@@ -144,6 +144,8 @@ program main
      end do
 
      do k=Nz_k,1,-1
+
+        ! Better to change zmax for integration over dz_f?
         z_f=z*exp(dble(k)/dble(Nz_k)*log(zmax/z))
         dz_f=z_f-z*exp(dble(k-1)/dble(Nz_k)*log(zmax/z))
         a_c=1.0/(1.0+z_f)
